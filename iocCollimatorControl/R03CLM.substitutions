@@ -1,0 +1,86 @@
+#BO,EPICS->PLC,Command
+file "../../db/bo_word.template"{ pattern
+{	P,		R,					PORT,		OFFSET,		MASK,		ZNAM,		ONAM	}
+{	SR:R03:CLM:R03CLM:,	btn_LocalOrRemote,			R03CLM_BO1_Bits,	0,		0x0001,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_E_STOP,				R03CLM_BO1_Bits,	0,		0x0002,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	m_restartTC,				R03CLM_BO1_Bits,	0,		0x0004,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Move_Axis1,				R03CLM_BO2_Bits,	0,		0x0001,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogForward_Axis1,			R03CLM_BO2_Bits,	0,		0x0002,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogBackward_Axis1,			R03CLM_BO2_Bits,	0,		0x0004,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Stop_Axis1,				R03CLM_BO2_Bits,	0,		0x0008,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Reset_Axis1,			R03CLM_BO2_Bits,	0,		0x0010,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_SetPosition_Axis1,			R03CLM_BO2_Bits,	0,		0x0020,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	LVDT1_FunctionOn,			R03CLM_BO2_Bits,	0,		0x0040,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	LVDT1_ManualReleaseAlarm,		R03CLM_BO2_Bits,	0,		0x0080,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Move_Axis2,				R03CLM_BO3_Bits,	0,		0x0001,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogForward_Axis2,			R03CLM_BO3_Bits,	0,		0x0002,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogBackward_Axis2,			R03CLM_BO3_Bits,	0,		0x0004,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Stop_Axis2,				R03CLM_BO3_Bits,	0,		0x0008,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Reset_Axis2,			R03CLM_BO3_Bits,	0,		0x0010,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_SetPosition_Axis2,			R03CLM_BO3_Bits,	0,		0x0020,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	LVDT2_FunctionOn,			R03CLM_BO3_Bits,	0,		0x0040,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	LVDT2_ManualReleaseAlarm,		R03CLM_BO3_Bits,	0,		0x0080,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Move_AxisAll,			R03CLM_BO4_Bits,	0,		0x0001,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogForward_AxisAll,			R03CLM_BO4_Bits,	0,		0x0002,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_JogBackward_AxisAll,		R03CLM_BO4_Bits,	0,		0x0004,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Stop_AxisAll,			R03CLM_BO4_Bits,	0,		0x0008,		Low,		High	}
+{	SR:R03:CLM:R03CLM:,	btn_Reset_AxisAll,			R03CLM_BO4_Bits,	0,		0x0010,		Low,		High	}
+}
+#AO,EPICS->PLC,Command
+file "../../db/aoFloat64.template" { pattern
+{	P,           	R,               			PORT,      	OFFSET,   	DATA_TYPE,    	LOPR, 	HOPR, PREC	}
+{	SR:R03:CLM:R03CLM:,	targetPositionAxis1,			R03CLM_AO1_FLOAT,	0,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	targetVelocityAxis1,			R03CLM_AO1_FLOAT,	2,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	increaseJogPositionAxis1,		R03CLM_AO1_FLOAT,	4,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	Axis1_minPosition,			R03CLM_AO1_FLOAT,	6,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	Axis1_maxPosition,			R03CLM_AO1_FLOAT,	8,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	LVDT1_Threshold,			R03CLM_AO1_FLOAT,	10,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	PositionSetValue_Axis1,			R03CLM_AO1_FLOAT,	12,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	targetPositionAxis2,			R03CLM_AO2_FLOAT,	0,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	targetVelocityAxis2,			R03CLM_AO2_FLOAT,	2,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	increaseJogPositionAxis2,		R03CLM_AO2_FLOAT,	4,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	Axis2_minPosition,			R03CLM_AO2_FLOAT,	6,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	Axis2_maxPosition,			R03CLM_AO2_FLOAT,	8,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	LVDT2_Threshold,			R03CLM_AO2_FLOAT,	10,		FLOAT32_LE,	-1e6,	1e6,	4	}
+{	SR:R03:CLM:R03CLM:,	PositionSetValue_Axis2,			R03CLM_AO2_FLOAT,	12,		FLOAT32_LE,	-1e6,	1e6,	4	}
+}
+#R03CLM_BI,PLC->EPICS,Respond
+file "../../db/bi_word.template"{ pattern
+{	P,		R,					PORT,		OFFSET,		MASK,		ZNAM,		ONAM,		ZSV,		OSV,		SCAN		}
+{	SR:R03:CLM:R03CLM:,	E_STOP_led,				R03CLM_BI1_Bits,	0,		0x0001,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Local_led,				R03CLM_BI1_Bits,	0,		0x0002,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Remote_led,				R03CLM_BI1_Bits,	0,		0x0004,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Error_led,				R03CLM_BI1_Bits,	0,		0x0008,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Axis1_error,				R03CLM_BI2_Bits,	0,		0x0001,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Axis1_moving,				R03CLM_BI2_Bits,	0,		0x0002,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	foreward_limit_axis1,			R03CLM_BI2_Bits,	0,		0x0004,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	backward_limit_axis1,			R03CLM_BI2_Bits,	0,		0x0008,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Moving_done_Axis1,			R03CLM_BI2_Bits,	0,		0x0010,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	PositionSetDone_Axis1,			R03CLM_BI2_Bits,	0,		0x0020,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Axis2_error,				R03CLM_BI3_Bits,	0,		0x0001,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Axis2_moving,				R03CLM_BI3_Bits,	0,		0x0002,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	foreward_limit_axis2,			R03CLM_BI3_Bits,	0,		0x0004,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	backward_limit_axis2,			R03CLM_BI3_Bits,	0,		0x0008,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	Moving_done_Axis2,			R03CLM_BI3_Bits,	0,		0x0010,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+{	SR:R03:CLM:R03CLM:,	PositionSetDone_Axis2,			R03CLM_BI3_Bits,	0,		0x0020,		Low,		High,		NO_ALARM,	NO_ALARM,	"I/O Intr"	}
+}
+#R03CLM_AI,PLC->EPICS,Respond
+file "../../db/aiFloat64.template"{ pattern
+{	P,			R,					PORT,		OFFSET,		DATA_TYPE,	LOPR,	HOPR,	PREC,	SCAN			}
+{	SR:R03:CLM:R03CLM:,	Axis1_Currentvelocity,			R03CLM_AI1_FLOAT,	0,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+{	SR:R03:CLM:R03CLM:,	Axis1_CurrentPosition,			R03CLM_AI1_FLOAT,	2,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+{	SR:R03:CLM:R03CLM:,	LVDT1_PV,				R03CLM_AI1_FLOAT,	4,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+{	SR:R03:CLM:R03CLM:,	Axis2_Currentvelocity,			R03CLM_AI2_FLOAT,	0,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+{	SR:R03:CLM:R03CLM:,	Axis2_CurrentPosition,			R03CLM_AI2_FLOAT,	2,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+{	SR:R03:CLM:R03CLM:,	LVDT2_PV,				R03CLM_AI2_FLOAT,	4,		FLOAT32_LE,	-1e6,	1e6,	4,	"I/O Intr"		}
+}
+#Intin,PLC->EPICS,Respond
+file "../../db/int64in.template"{ pattern
+{	P,			R,			PORT,		OFFSET,		DATA_TYPE,	SCAN			}
+{	SR:R03:CLM:R03CLM:,	ErrorId,		R03CLM_Intin,		0,		INT32_LE,	"I/O Intr"		}
+}
+#StringIn,PLC->EPICS,Respond
+file "../../db/stringin.template"{ pattern
+{	P,			R,				PORT,		OFFSET,		DATA_TYPE,	SCAN			}
+{	SR:R03:CLM:R03CLM:,	ErrorDescription,		R03CLM_Stringin,	0,		STRING_LOW_HIGH,		"I/O Intr"		}
+}

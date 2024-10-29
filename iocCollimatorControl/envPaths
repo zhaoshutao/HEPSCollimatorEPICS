@@ -1,0 +1,5 @@
+epicsEnvSet("IOC","iocCollimatorControl")
+epicsEnvSet("TOP","/home/hepscollimator/project/collimator/ioc")
+epicsEnvSet("ASYN","/home/hepscollimator/project/collimator/epics/support/asyn-R4-43")
+epicsEnvSet("MODBUS","/home/hepscollimator/project/collimator/epics/support/modbus-R3-3")
+epicsEnvSet("EPICS_BASE","/home/hepscollimator/project/collimator/epics/base")

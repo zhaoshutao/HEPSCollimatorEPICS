@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <height>800</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <width>800</width>
+    <height>60</height>
+    <line_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>HEPS Collimator Control System (R39)</text>
+    <width>760</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="24.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_2</name>
+    <y>680</y>
+    <width>800</width>
+    <line_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Picture_1</name>
+    <file>HEPS logo.jpg</file>
+    <y>620</y>
+    <width>290</width>
+    <height>50</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>GotoA_4</name>
+    <actions>
+      <action type="open_display">
+        <file>HEPSCollimatorControl_Main.bob</file>
+        <target>replace</target>
+        <description>Alarm</description>
+      </action>
+    </actions>
+    <text>MAIN</text>
+    <x>610</x>
+    <y>627</y>
+    <width>160</width>
+    <height>40</height>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>Motion</name>
+        <children>
+          <widget type="group" version="2.0.0">
+            <name>1#2#Motor</name>
+            <x>7</x>
+            <y>318</y>
+            <width>782</width>
+            <height>90</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_56</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Move_AxisAll</pv_name>
+              <x>62</x>
+              <y>12</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Move</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Move</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_57</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogForward_AxisAll</pv_name>
+              <x>195</x>
+              <y>12</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG+</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG+</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_58</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogBackward_AxisAll</pv_name>
+              <x>331</x>
+              <y>12</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG-</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG-</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_59</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Stop_AxisAll</pv_name>
+              <x>471</x>
+              <y>12</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Stop</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Stop</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_60</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Reset_AxisAll</pv_name>
+              <x>608</x>
+              <y>12</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>RESET</off_label>
+              <off_color>
+                <color red="153" green="179" blue="255">
+                </color>
+              </off_color>
+              <on_label>RESET</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>1#Motor</name>
+            <x>9</x>
+            <y>10</y>
+            <width>380</width>
+            <height>319</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="group" version="2.0.0">
+              <name>status</name>
+              <x>231</x>
+              <y>46</y>
+              <width>120</width>
+              <height>190</height>
+              <enabled>true</enabled>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_66</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Reset_Axis1</pv_name>
+              <x>248</x>
+              <y>235</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>RESET</off_label>
+              <off_color>
+                <color red="153" green="179" blue="255">
+                </color>
+              </off_color>
+              <on_label>RESET</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_19</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT1_PV</pv_name>
+              <x>244</x>
+              <y>22</y>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_55</name>
+              <text>CurrentVelocity</text>
+              <x>10</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_56</name>
+              <text>CurrentPosition</text>
+              <x>123</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_57</name>
+              <text>TargetVelocity</text>
+              <x>8</x>
+              <y>49</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_58</name>
+              <text>TargetPosition</text>
+              <x>125</x>
+              <y>49</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_67</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Move_Axis1</pv_name>
+              <x>20</x>
+              <y>116</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Move</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Move</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_68</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Stop_Axis1</pv_name>
+              <x>123</x>
+              <y>115</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Stop</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Stop</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_69</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogForward_Axis1</pv_name>
+              <x>123</x>
+              <y>185</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG+</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG+</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_70</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogBackward_Axis1</pv_name>
+              <x>123</x>
+              <y>235</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG-</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG-</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_20</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis1_CurrentPosition</pv_name>
+              <x>123</x>
+              <y>22</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_18</name>
+              <pv_name>SR:R39:CLM:R39CLM:targetPositionAxis1</pv_name>
+              <x>123</x>
+              <y>70</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>20.0</maximum>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_19</name>
+              <pv_name>SR:R39:CLM:R39CLM:increaseJogPositionAxis1</pv_name>
+              <x>2</x>
+              <y>227</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.01</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_59</name>
+              <text>JogIncrease</text>
+              <y>206</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_21</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis1_Currentvelocity</pv_name>
+              <y>23</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_20</name>
+              <pv_name>SR:R39:CLM:R39CLM:targetVelocityAxis1</pv_name>
+              <y>71</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>1.0</maximum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_60</name>
+              <text>LVDTPosition</text>
+              <x>238</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_30</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis1_moving</pv_name>
+              <x>251</x>
+              <y>68</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>Moving</off_label>
+              <on_label>Moving</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_31</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis1_error</pv_name>
+              <x>251</x>
+              <y>109</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>AxisError</off_label>
+              <on_label>AxisError</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_28</name>
+              <pv_name>SR:R39:CLM:R39CLM:backward_limit_axis1</pv_name>
+              <x>251</x>
+              <y>149</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>LimitSwitch</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>LimitSwitch</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_32</name>
+              <pv_name>SR:R39:CLM:R39CLM:E_STOP_led</pv_name>
+              <x>251</x>
+              <y>192</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>Emergency</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Emergency</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>2#Motor</name>
+            <x>389</x>
+            <y>9</y>
+            <width>400</width>
+            <height>320</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="group" version="2.0.0">
+              <name>status</name>
+              <x>231</x>
+              <y>46</y>
+              <width>121</width>
+              <height>190</height>
+              <enabled>true</enabled>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_71</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Reset_Axis2</pv_name>
+              <x>250</x>
+              <y>235</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>RESET</off_label>
+              <off_color>
+                <color red="153" green="179" blue="255">
+                </color>
+              </off_color>
+              <on_label>RESET</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_22</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT2_PV</pv_name>
+              <x>244</x>
+              <y>22</y>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_63</name>
+              <text>CurrentVelocity</text>
+              <x>10</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_64</name>
+              <text>CurrentPosition</text>
+              <x>123</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_65</name>
+              <text>TargetVelocity</text>
+              <x>8</x>
+              <y>49</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_66</name>
+              <text>TargetPosition</text>
+              <x>125</x>
+              <y>49</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_72</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Move_Axis2</pv_name>
+              <x>20</x>
+              <y>116</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Move</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Move</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_73</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_Stop_Axis2</pv_name>
+              <x>123</x>
+              <y>115</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Stop</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Stop</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_74</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogForward_Axis2</pv_name>
+              <x>123</x>
+              <y>185</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG+</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG+</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_75</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_JogBackward_Axis2</pv_name>
+              <x>123</x>
+              <y>235</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG-</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>JOG-</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_23</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis2_CurrentPosition</pv_name>
+              <x>123</x>
+              <y>22</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_21</name>
+              <pv_name>SR:R39:CLM:R39CLM:targetPositionAxis2</pv_name>
+              <x>123</x>
+              <y>70</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>20.0</maximum>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_22</name>
+              <pv_name>SR:R39:CLM:R39CLM:increaseJogPositionAxis2</pv_name>
+              <x>2</x>
+              <y>227</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.01</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_67</name>
+              <text>JogIncrease</text>
+              <y>206</y>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_24</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis2_Currentvelocity</pv_name>
+              <y>23</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_23</name>
+              <pv_name>SR:R39:CLM:R39CLM:targetVelocityAxis2</pv_name>
+              <y>71</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>1.0</maximum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_68</name>
+              <text>LVDTPosition</text>
+              <x>238</x>
+              <width>140</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_37</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis2_moving</pv_name>
+              <x>251</x>
+              <y>68</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>Moving</off_label>
+              <on_label>Moving</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_38</name>
+              <pv_name>SR:R39:CLM:R39CLM:Axis2_error</pv_name>
+              <x>251</x>
+              <y>109</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>AxisError</off_label>
+              <on_label>AxisError</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_39</name>
+              <pv_name>SR:R39:CLM:R39CLM:backward_limit_axis2</pv_name>
+              <x>251</x>
+              <y>149</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>LimitSwitch</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>LimitSwitch</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_40</name>
+              <pv_name>SR:R39:CLM:R39CLM:E_STOP_led</pv_name>
+              <x>251</x>
+              <y>192</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>Emergency</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Emergency</on_label>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Alarm</name>
+            <x>8</x>
+            <y>400</y>
+            <width>780</width>
+            <height>100</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="label" version="2.0.0">
+              <name>Label_95</name>
+              <text>ErrorId</text>
+              <x>85</x>
+              <width>70</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_27</name>
+              <pv_name>SR:R39:CLM:R39CLM:ErrorId</pv_name>
+              <x>93</x>
+              <y>27</y>
+              <width>80</width>
+              <height>27</height>
+              <precision>0</precision>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_96</name>
+              <text>ErrorDespcription</text>
+              <x>205</x>
+              <width>184</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>Text Update_28</name>
+              <pv_name>SR:R39:CLM:R39CLM:ErrorDescription</pv_name>
+              <x>205</x>
+              <y>30</y>
+              <width>532</width>
+              <height>27</height>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_97</name>
+              <text>Error</text>
+              <x>7</x>
+              <width>60</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_29</name>
+              <pv_name>SR:R39:CLM:R39CLM:Error_led</pv_name>
+              <x>3</x>
+              <y>27</y>
+              <width>80</width>
+              <height>25</height>
+              <off_label>Error</off_label>
+              <on_label>Error</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color name="Background" red="255" green="255" blue="255">
+                </color>
+              </line_color>
+              <square>true</square>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Parameters</name>
+        <children>
+          <widget type="group" version="2.0.0">
+            <name>1#Motor</name>
+            <y>19</y>
+            <width>278</width>
+            <height>320</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="group" version="2.0.0">
+              <name>InputPosThreshold</name>
+              <y>4</y>
+              <width>250</width>
+              <height>89</height>
+              <transparent>true</transparent>
+              <enabled>true</enabled>
+              <widget type="spinner" version="2.0.0">
+                <name>Spinner_25</name>
+                <pv_name>SR:R39:CLM:R39CLM:Axis1_maxPosition</pv_name>
+                <x>51</x>
+                <y>33</y>
+                <width>132</width>
+                <border_alarm_sensitive>false</border_alarm_sensitive>
+                <minimum>-100.0</minimum>
+                <increment>0.1</increment>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_71</name>
+                <text>Upper</text>
+                <y>33</y>
+                <width>42</width>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_70</name>
+                <text>Lower</text>
+                <width>42</width>
+              </widget>
+              <widget type="spinner" version="2.0.0">
+                <name>Spinner_24</name>
+                <pv_name>SR:R39:CLM:R39CLM:Axis1_minPosition</pv_name>
+                <x>52</x>
+                <width>130</width>
+                <border_alarm_sensitive>false</border_alarm_sensitive>
+                <minimum>-100.0</minimum>
+                <increment>0.1</increment>
+              </widget>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>PositionSet</name>
+            <x>18</x>
+            <y>123</y>
+            <width>248</width>
+            <height>80</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_26</name>
+              <pv_name>SR:R39:CLM:R39CLM:PositionSetValue_Axis1</pv_name>
+              <y>10</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_76</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_SetPosition_Axis1</pv_name>
+              <x>122</x>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Set</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Set</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>LVDT</name>
+            <x>18</x>
+            <y>203</y>
+            <width>248</width>
+            <height>112</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_27</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT1_Threshold</pv_name>
+              <y>50</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_74</name>
+              <text>Threshold</text>
+              <y>30</y>
+              <width>140</width>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_77</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT1_ManualReleaseAlarm</pv_name>
+              <x>122</x>
+              <y>30</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>ReleaseAlarm</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>ReleaseAlarm</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="slide_button" version="2.0.0">
+              <name>Slide Button_3</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT1_FunctionOn</pv_name>
+              <bit>3</bit>
+              <label>FunctionOn</label>
+              <x>12</x>
+              <width>167</width>
+              <height>20</height>
+              <off_color>
+                <color red="60" green="100" blue="60">
+                </color>
+              </off_color>
+              <on_color>
+                <color red="60" green="255" blue="60">
+                </color>
+              </on_color>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>2#Motor</name>
+            <x>278</x>
+            <y>23</y>
+            <width>278</width>
+            <height>320</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="group" version="2.0.0">
+              <name>InputPosThreshold</name>
+              <y>4</y>
+              <width>250</width>
+              <height>89</height>
+              <transparent>true</transparent>
+              <enabled>true</enabled>
+              <widget type="spinner" version="2.0.0">
+                <name>Spinner_28</name>
+                <pv_name>SR:R39:CLM:R39CLM:Axis2_maxPosition</pv_name>
+                <x>51</x>
+                <y>33</y>
+                <width>134</width>
+                <border_alarm_sensitive>false</border_alarm_sensitive>
+                <minimum>-100.0</minimum>
+                <increment>0.1</increment>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_72</name>
+                <text>Upper</text>
+                <y>33</y>
+                <width>42</width>
+              </widget>
+              <widget type="label" version="2.0.0">
+                <name>Label_73</name>
+                <text>Lower</text>
+                <width>42</width>
+              </widget>
+              <widget type="spinner" version="2.0.0">
+                <name>Spinner_29</name>
+                <pv_name>SR:R39:CLM:R39CLM:Axis2_minPosition</pv_name>
+                <x>52</x>
+                <width>132</width>
+                <border_alarm_sensitive>false</border_alarm_sensitive>
+                <minimum>-100.0</minimum>
+                <increment>0.1</increment>
+              </widget>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>PositionSet</name>
+            <x>296</x>
+            <y>127</y>
+            <width>248</width>
+            <height>80</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_30</name>
+              <pv_name>SR:R39:CLM:R39CLM:PositionSetValue_Axis2</pv_name>
+              <y>10</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_84</name>
+              <pv_name>SR:R39:CLM:R39CLM:btn_SetPosition_Axis2</pv_name>
+              <x>122</x>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Set</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Set</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>LVDT</name>
+            <x>296</x>
+            <y>207</y>
+            <width>248</width>
+            <height>112</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="spinner" version="2.0.0">
+              <name>Spinner_31</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT2_Threshold</pv_name>
+              <y>50</y>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-100.0</minimum>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_75</name>
+              <text>Threshold</text>
+              <y>30</y>
+              <width>140</width>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>Boolean Button_85</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT2_ManualReleaseAlarm</pv_name>
+              <x>122</x>
+              <y>30</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>ReleaseAlarm</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>ReleaseAlarm</on_label>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="slide_button" version="2.0.0">
+              <name>Slide Button_4</name>
+              <pv_name>SR:R39:CLM:R39CLM:LVDT2_FunctionOn</pv_name>
+              <bit>3</bit>
+              <label>FunctionOn</label>
+              <x>12</x>
+              <width>167</width>
+              <height>20</height>
+              <off_color>
+                <color red="60" green="100" blue="60">
+                </color>
+              </off_color>
+              <on_color>
+                <color red="60" green="255" blue="60">
+                </color>
+              </on_color>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>Local&amp;Remote</name>
+            <x>558</x>
+            <y>29</y>
+            <width>220</width>
+            <height>101</height>
+            <transparent>true</transparent>
+            <enabled>true</enabled>
+            <widget type="label" version="2.0.0">
+              <name>Label_84</name>
+              <text>Local</text>
+              <y>5</y>
+              <width>70</width>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_23</name>
+              <pv_name>SR:R39:CLM:R39CLM:Local_led</pv_name>
+              <x>69</x>
+              <width>80</width>
+              <height>25</height>
+              <square>true</square>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>Label_85</name>
+              <text>Remote</text>
+              <y>45</y>
+              <width>70</width>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LED_24</name>
+              <pv_name>SR:R39:CLM:R39CLM:Remote_led</pv_name>
+              <x>69</x>
+              <y>40</y>
+              <width>80</width>
+              <height>25</height>
+              <square>true</square>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <y>61</y>
+    <width>800</width>
+    <height>550</height>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>Spinner_32</name>
+    <x>900</x>
+    <y>290</y>
+    <width>10</width>
+    <height>1</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_82</name>
+    <pv_name>SR:R39:CLM:R39CLM:btn_E_STOP</pv_name>
+    <bit>-1</bit>
+    <x>310</x>
+    <y>627</y>
+    <width>140</width>
+    <height>40</height>
+    <off_label>EmergencyStop</off_label>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_label>EmergencyStop</on_label>
+    <on_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <mode>2</mode>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_83</name>
+    <pv_name>SR:R39:CLM:R39CLM:m_restartTC</pv_name>
+    <x>480</x>
+    <y>627</y>
+    <width>90</width>
+    <height>40</height>
+    <off_label>RestartTC</off_label>
+    <off_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </off_color>
+    <on_label>RestartTC</on_label>
+    <on_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <mode>1</mode>
+  </widget>
+</display>
